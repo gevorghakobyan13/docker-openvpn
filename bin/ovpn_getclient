@@ -35,7 +35,9 @@ get_client_config() {
 client
 nobind
 dev $OVPN_DEVICE
+auth-user-pass
 remote-cert-tls server
+
 
 remote $OVPN_CN $OVPN_PORT $OVPN_PROTO"
     if [ "$OVPN_PROTO" == "udp6" ]; then
